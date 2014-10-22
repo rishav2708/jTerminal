@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.io.*;
+import java.io.File;
 class JTerm{
 	JTerm(){
 		System.out.println("\u001b[6;18H\u001b[44m\u001b[32m [$]JTerm                                X ");
