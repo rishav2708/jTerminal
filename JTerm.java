@@ -61,6 +61,23 @@ class JTerm{
                 	s="";
 
                 }
+                else if(s.startsWith("chat "))
+                {
+                	String s1=s.substring(5);
+                	String[] tokens=s1.split(",");
+                	String hostname=tokens[0];
+                	String portno=tokens[1];
+                	try
+                	{ 
+                		ChatClient.main(hostname,portno);
+                	}
+                	catch(Exception e)
+                	{
+                		System.out.println(e);
+                	}
+                	j++;
+                	s="";
+                }
                             else{
                             	//System.out.println("\u001b["+(j+1)+";19H\u001b[37m"+"Invalid Command");
 				j++;
